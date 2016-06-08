@@ -28,7 +28,5 @@ library-app:
     build: ./library-app
     links:
         - library-service:library-service
-#    environment:
-#        BOOK_SERVICE_URL: "http://book-service:8080/"
     ports:
         - "80:80"        

@@ -14,7 +14,7 @@ Book service for accessing the book database
 2. Run a container
 
    ```
-   docker run --link book-database -p 8080:8080 -e BOOK_DATABASE=book-database bookservice
+   docker run --link book-database -p 8080:8080 -e BOOK_DATABASE=book-database book-service
    ```
 
 3. Test the service

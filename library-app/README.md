@@ -10,3 +10,23 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+## Production
+
+1. Build the application
+
+   ```
+   grunt build
+   ```
+
+2. Build the database docker
+
+   ```
+   docker build -t library-app .
+   ```
+
+3. Run the database
+
+   ```
+   docker run --name library-app --link library-service:library-service -d -p 80:80 library-app
+   ```
