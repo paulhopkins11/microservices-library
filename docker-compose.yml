@@ -1,0 +1,34 @@
+book-database:
+    build: ./book-database
+    environment:
+        MYSQL_ROOT_PASSWORD: my-secret-pw
+    ports:
+        - "3306:3306"
+
+book-service:
+    build: ./book-service
+    links:
+        - book-database:book-database
+    environment:
+        BOOK_DATABASE: book-database
+        MYSQL_ROOT_PASSWORD: my-secret-pw
+    ports:
+        - "82:8080"
+
+library-service:
+    build: ./library-service
+    links:
+        - book-service:book-service
+    environment:
+        BOOK_SERVICE_URL: "http://book-service:8080/"
+    ports:
+        - "81:8080"        
+        
+library-app:
+    build: ./library-app
+    links:
+        - library-service:library-service
+#    environment:
+#        BOOK_SERVICE_URL: "http://book-service:8080/"
+    ports:
+        - "80:80"        

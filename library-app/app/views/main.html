@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h1>Framework Training Library!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Click the button to load the library.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-click="loadLibrary()">Reload<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row marketing">
+  <h4>Library Date</h4>
+  <p>{{library.requestDate}}
+  </p>
+  <h4>Book List</h4>
+  <table class="table table-hover">
+    <tr ng-repeat="book in library.books">
+       <td>{{book.title}}</td>
+       <td>{{book.isbn}}</td>
+       <td>{{book.description}}</td>
+    </tr>
+  </table>
+</div>
