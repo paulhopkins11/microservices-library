@@ -35,3 +35,9 @@
    curl http://localhost:81/library
    {"requestDate":1465401063315,"books":[{"title":"Harry Potter","isbn":"ISBN:1234567890","description":"Wizarding"}]}
    ```
+
+5. Open the web application in a browser
+
+   ```
+   http://localhost
+   ```
