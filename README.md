@@ -5,7 +5,7 @@
 1. Build the application
 
    ```
-   mvn clean package
+   ./mvnw clean package
    ```
 
 2. Build the images
