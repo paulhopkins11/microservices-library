@@ -9,12 +9,12 @@
    ```
    or by using docker
    ```
-   docker run -it --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.6.3-openjdk-11 sh
+   docker run -it --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.6.3-openjdk-11
    ```
    You can also cache your maven directory
    ```
    docker volume create --name maven-repo
-   docker run -it --rm -v maven-repo:/root/.m2 -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.6.3-openjdk-11 sh
+   docker run -it --rm -v maven-repo:/root/.m2 -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.6.3-openjdk-11
    ```
 
 2. Build the images
