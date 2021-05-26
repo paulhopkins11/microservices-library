@@ -9,7 +9,7 @@
    ```
    or by using docker
    ```
-   docker run -it --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.6.3-openjdk-11
+   docker run -it --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.6.3-openjdk-11 mvn clean package
    ```
    You can also cache your maven directory
    ```
