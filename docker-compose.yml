@@ -5,7 +5,8 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: my-secret-pw
         ports:
-            - "3306:3306"
+            # Not needed unless testing
+            # - "3306:3306"
 
     book-service:
         build: ./book-service
@@ -15,6 +16,7 @@ services:
             BOOK_DATABASE: book-database
             MYSQL_ROOT_PASSWORD: my-secret-pw
         ports:
+            # Not needed unless testing
             - "82:8080"
 
     library-service:
@@ -24,6 +26,7 @@ services:
         environment:
             BOOK_SERVICE_URL: "http://book-service:8080/"
         ports:
+            # Not needed unless testing
             - "81:8080"
 
     library-app:

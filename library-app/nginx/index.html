@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <p id="demo">loading...</p>
+    </body>
+        
+    <script>
+        function httpGet(theUrl)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+        }
+        // document.getElementById("demo").innerHTML = "Hello JavaScript!"
+        document.getElementById("demo").innerHTML = httpGet("http://localhost/library")
+    </script>
+</html>
